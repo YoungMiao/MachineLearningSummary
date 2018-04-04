@@ -1,4 +1,5 @@
-﻿###一．	问题的数学表达，回归的对象是什么？
+﻿## Bounding box Regression分析
+### 一．	问题的数学表达，回归的对象是什么？
 &#8195;我们一般最开始都有一个初始的BBox，但是这只是个粗略的BBox。比如RCNN，fastrcnn用Selective Search方法生成的一系列Proposals，faster-rcnn的anchors对应的boxes。这些都是粗略的框。我们最终要得到精确的位置框，所以需要用回归的方法精修BBox。
 &#8195;因此，我们的输入是初始的BBox，需要找到一个映射把初始的BBox精修到最后Ground Truth。对应的数学描述如下：
 ![这里写图片描述](https://img-blog.csdn.net/20180404094648496?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JhaWR1XzI2Nzg4OTUx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
